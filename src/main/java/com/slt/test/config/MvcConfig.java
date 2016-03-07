@@ -12,7 +12,7 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 /**
- * Created by Administrator on 2016/3/5.
+ * Created by slt on 2016/3/5.
  */
 @Configuration
 @EnableWebMvc
