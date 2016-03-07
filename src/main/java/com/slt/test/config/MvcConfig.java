@@ -2,8 +2,13 @@ package com.slt.test.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -16,9 +21,16 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
  */
 @Configuration
 @EnableWebMvc
+@Import({SecurityConfig.class})
+@ComponentScan(value = "com.slt.test.controller")
 public class MvcConfig extends WebMvcConfigurerAdapter {
     @Autowired
     private Environment environment;
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }
 
 
     public void configureViewResolvers(ViewResolverRegistry registry) {
@@ -38,12 +50,15 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         if (environment.acceptsProfiles("test") || environment.acceptsProfiles("develop"))
             rootTemplateResolver.setCacheable(false);
         rootTemplateResolver.setCharacterEncoding("UTF-8");
-
         engine.setTemplateResolver(rootTemplateResolver);
         resolver.setTemplateEngine(engine);
-//        resolver.setOrder(99);
         resolver.setOrder(2147483647 + 10);
         resolver.setCharacterEncoding("UTF-8");
         return resolver;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

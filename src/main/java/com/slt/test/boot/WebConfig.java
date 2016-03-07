@@ -10,4 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages = "com.slt.test.config")
 public class WebConfig {
+
+
 }
