@@ -52,6 +52,7 @@ public class SecurityConfig {
                     .headers().frameOptions().sameOrigin().and()
                     .authorizeRequests().antMatchers(
                     "/front/**",
+                    "/index",
                     "/back/login.html"
             ).permitAll().anyRequest().authenticated()
                     .and()
