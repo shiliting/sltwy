@@ -17,7 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
-    private static String loginPage = "/back/login.html";
+    private static String loginPage = "/back/assets/signin.html";
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -42,7 +42,14 @@ public class SecurityConfig {
         @Override
         public void configure(WebSecurity web) throws Exception {
             super.configure(web);
-            web.ignoring().antMatchers("/resource/**");
+            web.ignoring().antMatchers(
+                    "/resource/**",
+                    "/back/assets/css/**",
+                    "/back/assets/fonts/**",
+                    "/back/assets/images/**",
+                    "/back/assets/js/**",
+                    "/back/assets/holder.js/**"
+            );
         }
 
 
@@ -53,12 +60,13 @@ public class SecurityConfig {
                     .authorizeRequests().antMatchers(
                     "/front/**",
                     "/index",
-                    "/back/login.html"
+                    "/back/assets/signin.html"
             ).permitAll().anyRequest().authenticated()
                     .and()
                     .csrf().disable()
                     .formLogin()
                     .loginPage(loginPage)
+                    .failureUrl(loginPage)
                     .and()
                     .httpBasic();
         }

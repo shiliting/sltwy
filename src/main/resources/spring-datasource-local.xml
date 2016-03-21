@@ -12,10 +12,19 @@
 <beans profile="develop" xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>
+        <property name="username" value="dbuser"/>
+        <property name="password" value="ddbbuusseerr"/>
+    </bean>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:packagesToScan="com.slt.test.entity">
+        <property name="dataSource" ref="dataSource"/>
         <property name="persistenceProvider">
             <bean class="org.eclipse.persistence.jpa.PersistenceProvider"/>
         </property>
@@ -24,13 +33,14 @@
         </property>
         <property name="jpaPropertyMap">
             <map>
-                <entry key="javax.persistence.jdbc.url"
-                       value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>
-                <entry key="javax.persistence.jdbc.user" value="dbuser"/>
-                <entry key="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-                <entry key="javax.persistence.jdbc.password" value="ddbbuusseerr"/>
+                <!--<entry key="javax.persistence.jdbc.url"-->
+                       <!--value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>-->
+                <!--<entry key="javax.persistence.jdbc.user" value="dbuser"/>-->
+                <!--<entry key="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
+                <!--<entry key="javax.persistence.jdbc.password" value="ddbbuusseerr"/>-->
                 <entry key="javax.persistence.schema-generation.database.action" value="create"/>
                 <entry key="eclipselink.weaving" value="false"/>
+                <entry key="eclipselink.logging.logger" value="org.eclipse.persistence.logging.CommonsLoggingLog"/>
                 <entry key="eclipselink.logging.level" value="FINE"/>
             </map>
         </property>

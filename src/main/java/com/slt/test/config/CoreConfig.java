@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @Configuration
 @ImportResource(value = "classpath:spring-jpa.xml")
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages ={"com.slt.test.repository"})
 public class CoreConfig {
 }
