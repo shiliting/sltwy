@@ -22,7 +22,7 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 @Configuration
 @EnableWebMvc
 @Import({SecurityConfig.class})
-@ComponentScan(value = "com.slt.test.controller")
+@ComponentScan(value = {"com.slt.test.controller","com.slt.test.service"})
 public class MvcConfig extends WebMvcConfigurerAdapter {
     @Autowired
     private Environment environment;
