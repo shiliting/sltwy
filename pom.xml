@@ -43,12 +43,14 @@
             <version>4.0.0-b01</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>com.huotu.common</groupId>
             <artifactId>huotulib</artifactId>
