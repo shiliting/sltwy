@@ -9,6 +9,7 @@
 
     <name>sltwy</name>
 
+    <!-- 发现依赖和扩展的远程仓库列表。 -->
     <repositories>
         <repository>
             <id>repo-huotu</id>
@@ -22,9 +23,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- 继承自该项目的所有子项目的默认依赖信息。
+    这部分的依赖信息不会被立即解析,而是当子项目声明一个依赖（必须描述group ID和artifact ID信息），
+    如果group ID和artifact ID以外的一些信息没有描述，
+    则通过group ID和artifact ID匹配到这里的依赖，并使用这里的依赖信息。 -->
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
@@ -33,9 +37,10 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
+    <!-- 该元素描述了项目相关的所有依赖。 这些依赖组成了项目构建过程中的一个个环节。
+    它们自动从项目定义的仓库中下载。要获取更多信息，请看项目依赖机制。 -->
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -97,6 +102,7 @@
         </dependency>
     </dependencies>
 
+    <!-- 构建项目需要的信息 -->
     <build>
         <plugins>
             <plugin>
