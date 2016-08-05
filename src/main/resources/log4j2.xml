@@ -13,8 +13,8 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p [%l] %m%n"/>
         </Console>
-        <RollingFile name="ServerDailyRollingFile" filename="logs/sisweb/app.log"
-                     filePattern="logs/sisweb/$${date:yyyy-MM}/app-%d{yyyy-MM-dd-HH}-%i.log">
+        <RollingFile name="ServerDailyRollingFile" filename="logs/sltwy/app.log"
+                     filePattern="logs/sltwy/$${date:yyyy-MM}/app-%d{yyyy-MM-dd-HH}-%i.log">
             <PatternLayout>
                 <pattern>%d - [%p]%m%n</pattern>
             </PatternLayout>
