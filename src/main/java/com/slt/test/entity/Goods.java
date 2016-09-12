@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "Goods")
 @Cacheable(value = false)
-@NamedQuery(name = "findGoodsByManager",query = "select g from Goods as g where g.manager=:manager")
 public class Goods {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,12 +21,8 @@ public class Goods {
     /**
      * 名称
      */
-
     private String title;
 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Manager manager;
 
     @PrePersist//实体加载前运行
     public void startGoods(){

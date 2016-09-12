@@ -1,17 +1,12 @@
 package com.slt.test.config;
 
-import com.slt.test.model.MyHandlerMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
@@ -22,8 +17,6 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
  */
 @Configuration
 @EnableWebMvc
-//@EnableCaching
-//@Import({SecurityConfig.class})
 @ComponentScan(value = {"com.slt.test.controller","com.slt.test.service.impl"})
 public class MvcConfig extends WebMvcConfigurerAdapter {
     @Autowired
@@ -35,12 +28,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     }
 
 
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        super.configureViewResolvers(registry);
-        registry.viewResolver(viewResolver());
-
-        registry.jsp();
-    }
+//    public void configureViewResolvers(ViewResolverRegistry registry) {
+//        super.configureViewResolvers(registry);
+//        registry.viewResolver(viewResolver());
+//        registry.jsp();
+//    }
 
     @Bean
     public ThymeleafViewResolver viewResolver() {
@@ -59,17 +51,17 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
 
-    /**
-     * 自定义HandlerMapping
-     * @return
-     */
-    @Bean
-    public HandlerMapping addMyHandlerMapping(){
-        return new MyHandlerMapping();
-    }
+//    /**
+//     * 自定义HandlerMapping
+//     * @return
+//     */
+//    @Bean
+//    public HandlerMapping addMyHandlerMapping(){
+//        return new MyHandlerMapping();
+//    }
 }

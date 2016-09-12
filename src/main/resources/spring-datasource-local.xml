@@ -17,9 +17,9 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>
-        <property name="username" value="dbuser"/>
-        <property name="password" value="ddbbuusseerr"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/sltwy"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
     </bean>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
