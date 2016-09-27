@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <h1 data-id="i7">Hello World!</h1>
+        <h2>second</h2>
+    </body>
+
+    <script src="jquery.js"></script>
+    <script src="test.js"></script>
+
+    <script type="text/javascript">
+        var CMS={};
+        CMS.tttt={};
+        $(document).trigger("content-changed",123);
+
+        var test={};
+        test.fun=function(){
+
+            console.log(Number.POSITIVE_INFINITY>Number.MAX_VALUE);
+        };
+
+        test.zhi="d";
+        test["fun"]();
+
+        var tt=test;
+        tt.zhi="change1";
+        console.log(test.zhi);
+
+        CMS.tttt=test;
+        CMS.tttt.zhi="change2";
+        console.log(test.zhi);
+
+
+        var stringtest="456";
+        var stringtest2=stringtest;
+        stringtest="741";
+        console.log("stringtest:"+stringtest2);
+
+
+        var orr;
+        var k=4>2||450||CMS.tttt;
+        console.log(k);
+
+         outerloop:
+        for(var i=0; i<10;i++){
+            innerloop:
+            for(var j=0;j<10;j++){
+                if(j==2){
+                    break outerloop;
+                }
+            }
+        }
+
+        console.log("call()函数调用:");
+        var calltest=function(){
+            console.log(this);
+        };
+        calltest();
+        calltest.call(tt);
+
+        var add=function(x){
+            var sum=1;
+            this.toString=function(){
+                return sum;
+            };
+
+        }
+        console.log(add(4));
+
+        var abc = new Function("x","y","return x*y;");
+        console.log(abc(2,3)); // "6"
+
+        (function(){
+            console.log("匿名函数");
+        }());
+
+
+
+
+    </script>
+
+
+</html>
