@@ -23,6 +23,9 @@ public class Goods {
      */
     private String title;
 
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Items items;
+
 
     @PrePersist//实体加载前运行
     public void startGoods(){

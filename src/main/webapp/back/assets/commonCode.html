@@ -14,28 +14,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!--//标题栏的logo图-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-    <title>Bracket Responsive Bootstrap3 Admin</title>
-
+    <title>标题</title>
     <link href="css/style.default.css" rel="stylesheet">
-
+    <link href="css/jquery.datatables.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->favicon.png
+    <![endif]-->
 </head>
-
 <body>
-
-
 <!-- Preloader -->
+<!--载入页面的动画-->
 <div id="preloader">
-    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    <div id="status">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
 </div>
 
+
 <section>
+
 
     <div class="leftpanel">
 
@@ -67,9 +69,10 @@
 
             <h5 class="sidebartitle">Navigation</h5>
             <ul class="nav nav-pills nav-stacked nav-bracket">
-                <li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
                 <li><a href="email.html"><span class="pull-right badge badge-success">2</span><i class="fa fa-envelope-o"></i> <span>Email</span></a></li>
-                <li class="nav-parent"><a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
+                <li class="nav-parent">
+                    <a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
                     <ul class="children">
                         <li><a href="general-forms.html"><i class="fa fa-caret-right"></i> General Forms</a></li>
                         <li><a href="form-layouts.html"><i class="fa fa-caret-right"></i> Form Layouts</a></li>
@@ -79,11 +82,12 @@
                         <li><a href="code-editor.html"><span class="pull-right badge badge-info">new</span><i class="fa fa-caret-right"></i> Code Editor</a></li>
                     </ul>
                 </li>
-                <li class="nav-parent nav-active active"><a href=""><i class="fa fa-suitcase"></i> <span>UI Elements</span></a>
-                    <ul class="children" style="display: block">
+                <li class="nav-parent">
+                    <a href=""><i class="fa fa-suitcase"></i> <span>UI Elements</span></a>
+                    <ul class="children">
                         <li><a href="buttons.html"><i class="fa fa-caret-right"></i> Buttons</a></li>
                         <li><a href="icons.html"><i class="fa fa-caret-right"></i> Icons</a></li>
-                        <li class="active"><a href="typography.html"><i class="fa fa-caret-right"></i> Typography</a></li>
+                        <li><a href="typography.html"><i class="fa fa-caret-right"></i> Typography</a></li>
                         <li><a href="alerts.html"><i class="fa fa-caret-right"></i> Alerts &amp; Notifications</a></li>
                         <li><a href="modals.html"><span class="pull-right badge badge-info">new</span><i class="fa fa-caret-right"></i> Modals</a></li>
                         <li><a href="tabs-accordions.html"><i class="fa fa-caret-right"></i> Tabs &amp; Accordions</a></li>
@@ -368,14 +372,13 @@
         </div><!-- headerbar -->
 
         <div class="pageheader">
-            <h2><i class="fa fa-font"></i> Typography <span>Subtitle goes here...</span></h2>
+            <h2><i class="fa fa-home"></i> Dashboard <span>Subtitle goes here...</span></h2>
 
             <div class="breadcrumb-wrapper">
                 <span class="label">You are here:</span>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Bracket</a></li>
-                    <li><a href="buttons.html">UI Elements</a></li>
-                    <li class="active">Typography</li>
+                    <li class="active">Dashboard</li>
                 </ol>
             </div>
         </div>
@@ -383,241 +386,670 @@
         <div class="contentpanel">
 
             <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-success panel-stat">
                         <div class="panel-heading">
-                            <div class="panel-btns">
-                                <a href="" class="panel-close">&times;</a>
-                                <a href="" class="minimize">&minus;</a>
-                            </div>
-                            <h4 class="panel-title">Headings</h4>
 
-                            <p>All HTML headings, <code>h1</code> through <code>h6</code>, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+                            <div class="stat">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="images/is-user.png" alt=""/>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <small class="stat-label">Visits Today</small>
+                                        <h1>900k+</h1>
+                                    </div>
+                                </div><!-- row -->
+
+                                <div class="mb15"></div>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <small class="stat-label">Pages / Visit</small>
+                                        <h4>7.80</h4>
+                                    </div>
+
+                                    <div class="col-xs-6">
+                                        <small class="stat-label">% New Visits</small>
+                                        <h4>76.43%</h4>
+                                    </div>
+                                </div><!-- row -->
+                            </div><!-- stat -->
+
                         </div><!-- panel-heading -->
-                        <div class="panel-body">
-                            <h1>h1. Bootstrap heading</h1>
-
-                            <h2>h2. Bootstrap heading</h2>
-
-                            <h3>h3. Bootstrap heading</h3>
-                            <h4>h4. Bootstrap heading</h4>
-                            <h5>h5. Bootstrap heading</h5>
-                            <h6>h6. Bootstrap heading</h6>
-                        </div>
                     </div><!-- panel -->
-                </div><!-- col-md-6 -->
-                <div class="col-md-6">
-                    <div class="panel panel-default">
+                </div><!-- col-sm-6 -->
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-danger panel-stat">
                         <div class="panel-heading">
-                            <div class="panel-btns">
-                                <a href="" class="panel-close">&times;</a>
-                                <a href="" class="minimize">&minus;</a>
-                            </div>
-                            <h4 class="panel-title">Body Copy</h4>
 
-                            <p>Bootstrap's global default font-size is 14px, with a line-height of 1.428. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> receive a bottom margin of half their computed line-height (10px by default).</p>
+                            <div class="stat">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="images/is-document.png" alt=""/>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <small class="stat-label">% Unique Visitors</small>
+                                        <h1>54.40%</h1>
+                                    </div>
+                                </div><!-- row -->
+
+                                <div class="mb15"></div>
+
+                                <small class="stat-label">Avg. Visit Duration</small>
+                                <h4>01:80:22</h4>
+
+                            </div><!-- stat -->
+
                         </div><!-- panel-heading -->
-                        <div class="panel-body">
-                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-
-                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
-                            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                        </div>
                     </div><!-- panel -->
-                </div><!-- col-md-6 -->
+                </div><!-- col-sm-6 -->
 
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-primary panel-stat">
+                        <div class="panel-heading">
+
+                            <div class="stat">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="images/is-document.png" alt=""/>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <small class="stat-label">Page Views</small>
+                                        <h1>300k+</h1>
+                                    </div>
+                                </div><!-- row -->
+
+                                <div class="mb15"></div>
+
+                                <small class="stat-label">% Bounce Rate</small>
+                                <h4>34.23%</h4>
+
+                            </div><!-- stat -->
+
+                        </div><!-- panel-heading -->
+                    </div><!-- panel -->
+                </div><!-- col-sm-6 -->
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-dark panel-stat">
+                        <div class="panel-heading">
+
+                            <div class="stat">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <img src="images/is-money.png" alt=""/>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <small class="stat-label">Today's Earnings</small>
+                                        <h1>$655</h1>
+                                    </div>
+                                </div><!-- row -->
+
+                                <div class="mb15"></div>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <small class="stat-label">Last Week</small>
+                                        <h4>$32,322</h4>
+                                    </div>
+
+                                    <div class="col-xs-6">
+                                        <small class="stat-label">Last Month</small>
+                                        <h4>$503,000</h4>
+                                    </div>
+                                </div><!-- row -->
+
+                            </div><!-- stat -->
+
+                        </div><!-- panel-heading -->
+                    </div><!-- panel -->
+                </div><!-- col-sm-6 -->
             </div><!-- row -->
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-btns">
-                        <a href="" class="panel-close">&times;</a>
-                        <a href="" class="minimize">&minus;</a>
-                    </div>
-                    <h4 class="panel-title">Lead Body Copy</h4>
-
-                    <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-                </div><!-- panel-heading -->
-                <div class="panel-body">
-                    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-                    <code>&lt;p class="lead"&gt;...&lt;/p&gt;</code>
-                </div>
-            </div><!-- panel -->
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-8 col-md-9">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-btns">
-                                <a href="" class="panel-close">&times;</a>
-                                <a href="" class="minimize">&minus;</a>
-                            </div>
-                            <h4 class="panel-title">Font Color</h4>
-
-                            <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
-                        </div><!-- panel-heading -->
                         <div class="panel-body">
-                            <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h5 class="subtitle mb5">Network Performance</h5>
 
-                            <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    <p class="mb15">Duis autem vel eum iriure dolor in hendrerit in vulputate...</p>
 
-                            <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                    <div id="basicflot" style="width: 100%; height: 300px; margin-bottom: 20px"></div>
+                                </div><!-- col-sm-8 -->
+                                <div class="col-sm-4">
+                                    <h5 class="subtitle mb5">Server Status</h5>
 
-                            <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                                    <p class="mb15">Summary of the status of your server.</p>
 
-                            <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                                    <span class="sublabel">CPU Usage (40.05 - 32 cpus)</span>
 
-                            <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-                        </div>
+                                    <div class="progress progress-sm">
+                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-primary"></div>
+                                    </div><!-- progress -->
+
+                                    <span class="sublabel">Memory Usage (32.2%)</span>
+
+                                    <div class="progress progress-sm">
+                                        <div style="width: 32%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success"></div>
+                                    </div><!-- progress -->
+
+                                    <span class="sublabel">Disk Usage (82.2%)</span>
+
+                                    <div class="progress progress-sm">
+                                        <div style="width: 82%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger"></div>
+                                    </div><!-- progress -->
+
+                                    <span class="sublabel">Databases (63/100)</span>
+
+                                    <div class="progress progress-sm">
+                                        <div style="width: 63%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning"></div>
+                                    </div><!-- progress -->
+
+                                    <span class="sublabel">Domains (2/10)</span>
+
+                                    <div class="progress progress-sm">
+                                        <div style="width: 20%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success"></div>
+                                    </div><!-- progress -->
+
+                                    <span class="sublabel">Email Account (13/50)</span>
+
+                                    <div class="progress progress-sm">
+                                        <div style="width: 26%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success"></div>
+                                    </div><!-- progress -->
+
+
+                                </div><!-- col-sm-4 -->
+                            </div><!-- row -->
+                        </div><!-- panel-body -->
                     </div><!-- panel -->
-                </div><!-- col-md-6 -->
+                </div><!-- col-sm-9 -->
 
-                <div class="col-md-6">
+                <div class="col-sm-4 col-md-3">
+
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-btns">
-                                <a href="" class="panel-close">&times;</a>
-                                <a href="" class="minimize">&minus;</a>
-                            </div>
-                            <h4 class="panel-title">Addresses</h4>
-
-                            <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br /&gt;</code>.</p>
-                        </div><!-- panel-heading -->
                         <div class="panel-body">
-                            <address>
-                                <strong>Twitter, Inc.</strong><br>
-                                795 Folsom Ave, Suite 600<br>
-                                San Francisco, CA 94107<br>
-                                <abbr title="Phone">P:</abbr> (123) 456-7890
-                            </address>
-                            <address>
-                                <strong>Full Name</strong><br>
-                                <a href="mailto:#">first.last@example.com</a>
-                            </address>
-                        </div>
+                            <h5 class="subtitle mb5">Most Browser Used</h5>
+
+                            <p class="mb15">Duis autem vel eum iriure dolor in hendrerit in vulputate...</p>
+
+                            <div id="donut-chart2" style="text-align: center; height: 298px;"></div>
+                        </div><!-- panel-body -->
                     </div><!-- panel -->
-                </div><!-- col-md-6 -->
+
+                </div><!-- col-sm-3 -->
+
             </div><!-- row -->
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-btns">
-                        <a href="" class="panel-close">&times;</a>
-                        <a href="" class="minimize">&minus;</a>
-                    </div>
-                    <h4 class="panel-title">Blockquote</h4>
+            <div class="row">
 
-                    <p>Wrap <code>&lt;blockquote&gt;</code> around any HTML as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
-                </div><!-- panel-heading -->
-                <div class="panel-body">
-                    <blockquote>
-                        <i class="fa fa-quote-left"></i>
+                <div class="col-sm-7">
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    </blockquote>
+                    <div class="table-responsive dashboard-datatable">
+                        <table class="table" id="table1">
+                            <thead>
+                            <tr>
+                                <th>Rendering engine</th>
+                                <th>Browser</th>
+                                <th>Platform(s)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="odd gradeX">
+                                <td>Trident</td>
+                                <td>Internet
+                                    Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+                            </tr>
+                            <tr class="even gradeC">
+                                <td>Trident</td>
+                                <td>Internet
+                                    Explorer 5.0
+                                </td>
+                                <td>Win 95+</td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td>Trident</td>
+                                <td>Internet
+                                    Explorer 5.5
+                                </td>
+                                <td>Win 95+</td>
+                            </tr>
+                            <tr class="even gradeA">
+                                <td>Trident</td>
+                                <td>Internet
+                                    Explorer 6
+                                </td>
+                                <td>Win 98+</td>
+                            </tr>
+                            <tr class="odd gradeA">
+                                <td>Trident</td>
+                                <td>Internet Explorer 7</td>
+                                <td>Win XP SP2+</td>
+                            </tr>
+                            <tr class="even gradeA">
+                                <td>Trident</td>
+                                <td>AOL browser (AOL desktop)</td>
+                                <td>Win XP</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Firefox 1.0</td>
+                                <td>Win 98+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Firefox 1.5</td>
+                                <td>Win 98+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Firefox 2.0</td>
+                                <td>Win 98+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Firefox 3.0</td>
+                                <td>Win 2k+ / OSX.3+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Camino 1.0</td>
+                                <td>OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Camino 1.5</td>
+                                <td>OSX.3+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Netscape 7.2</td>
+                                <td>Win 95+ / Mac OS 8.6-9.2</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Netscape Browser 8</td>
+                                <td>Win 98SE+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Netscape Navigator 9</td>
+                                <td>Win 98+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.0</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.1</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.2</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.3</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.4</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.5</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.6</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.7</td>
+                                <td>Win 98+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Mozilla 1.8</td>
+                                <td>Win 98+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Seamonkey 1.1</td>
+                                <td>Win 98+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Gecko</td>
+                                <td>Epiphany 2.20</td>
+                                <td>Gnome</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>Safari 1.2</td>
+                                <td>OSX.3</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>Safari 1.3</td>
+                                <td>OSX.3</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>Safari 2.0</td>
+                                <td>OSX.4+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>Safari 3.0</td>
+                                <td>OSX.4+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>OmniWeb 5.5</td>
+                                <td>OSX.4+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>iPod Touch / iPhone</td>
+                                <td>iPod</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Webkit</td>
+                                <td>S60</td>
+                                <td>S60</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 7.0</td>
+                                <td>Win 95+ / OSX.1+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 7.5</td>
+                                <td>Win 95+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 8.0</td>
+                                <td>Win 95+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 8.5</td>
+                                <td>Win 95+ / OSX.2+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 9.0</td>
+                                <td>Win 95+ / OSX.3+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 9.2</td>
+                                <td>Win 88+ / OSX.3+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera 9.5</td>
+                                <td>Win 88+ / OSX.3+</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Opera for Wii</td>
+                                <td>Wii</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Nokia N800</td>
+                                <td>N800</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Presto</td>
+                                <td>Nintendo DS browser</td>
+                                <td>Nintendo DS</td>
+                            </tr>
+                            <tr class="gradeC">
+                                <td>KHTML</td>
+                                <td>Konqureror 3.1</td>
+                                <td>KDE 3.1</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>KHTML</td>
+                                <td>Konqureror 3.3</td>
+                                <td>KDE 3.3</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>KHTML</td>
+                                <td>Konqureror 3.5</td>
+                                <td>KDE 3.5</td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td>Tasman</td>
+                                <td>Internet Explorer 4.5</td>
+                                <td>Mac OS 8-9</td>
+                            </tr>
+                            <tr class="gradeC">
+                                <td>Tasman</td>
+                                <td>Internet Explorer 5.1</td>
+                                <td>Mac OS 7.6-9</td>
+                            </tr>
+                            <tr class="gradeC">
+                                <td>Tasman</td>
+                                <td>Internet Explorer 5.2</td>
+                                <td>Mac OS 8-X</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Misc</td>
+                                <td>NetFront 3.1</td>
+                                <td>Embedded devices</td>
+                            </tr>
+                            <tr class="gradeA">
+                                <td>Misc</td>
+                                <td>NetFront 3.4</td>
+                                <td>Embedded devices</td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td>Misc</td>
+                                <td>Dillo 0.8</td>
+                                <td>Embedded devices</td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td>Misc</td>
+                                <td>Links</td>
+                                <td>Text only</td>
+                            </tr>
+                            <tr class="gradeX">
+                                <td>Misc</td>
+                                <td>Lynx</td>
+                                <td>Text only</td>
+                            </tr>
+                            <tr class="gradeC">
+                                <td>Misc</td>
+                                <td>IE Mobile</td>
+                                <td>Windows Mobile 6</td>
+                            </tr>
+                            <tr class="gradeC">
+                                <td>Misc</td>
+                                <td>PSP browser</td>
+                                <td>PSP</td>
+                            </tr>
+                            <tr class="gradeU">
+                                <td>Other browsers</td>
+                                <td>All others</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- table-responsive -->
 
-                    <blockquote>
-                        <i class="fa fa-quote-left"></i>
+                </div><!-- col-sm-7 -->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                    </blockquote>
+                <div class="col-sm-5">
 
-                </div><!-- panel-body -->
-            </div><!-- panel -->
+                    <div class="panel panel-success">
+                        <div class="panel-heading padding5">
+                            <div id="line-chart" style="height: 248px;"></div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tinystat pull-left">
+                                <div id="sparkline" class="chart mt5"></div>
+                                <div class="datainfo">
+                                    <span class="text-muted">Average Sales</span>
+                                    <h4>$630,201</h4>
+                                </div>
+                            </div><!-- tinystat -->
+                            <div class="tinystat pull-right">
+                                <div id="sparkline2" class="chart mt5"></div>
+                                <div class="datainfo">
+                                    <span class="text-muted">Total Sales</span>
+                                    <h4>$139,201</h4>
+                                </div>
+                            </div><!-- tinystat -->
+                        </div>
+                    </div><!-- panel -->
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-btns">
-                        <a href="" class="panel-close">&times;</a>
-                        <a href="" class="minimize">&minus;</a>
-                    </div>
-                    <h4 class="panel-title">List</h4>
-                </div><!-- panel-heading -->
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h5 class="subtitle">Unordered</h5>
+                </div><!-- col-sm-6 -->
+            </div><!-- row -->
 
-                            <p>A list of items in which the order does not explicitly matter.</p>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-default widget-photoday">
+                        <div class="panel-body">
+                            <a href="" class="photoday"><img src="images/photos/photo1.png" alt=""/></a>
+
+                            <div class="photo-details">
+                                <h4 class="photo-title">Strawhat In The Beach</h4>
+                                <small class="text-muted"><i class="fa fa-map-marker"></i> San Franciso, California, USA</small>
+                                <small>By: <a href="">ThemePixels</a></small>
+                            </div><!-- photo-details -->
+                            <ul class="photo-meta">
+                                <li><span><i class="fa fa-eye"></i> 32,102</span></li>
+                                <li><a href="#"><i class="fa fa-heart"></i> 1,003</a></li>
+                                <li><a href="#"><i class="fa fa-comments"></i> 52</a></li>
+                            </ul>
+                        </div><!-- panel-body -->
+                    </div><!-- panel -->
+                </div><!-- col-sm-6 -->
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-default panel-alt widget-messaging">
+                        <div class="panel-heading">
+                            <div class="panel-btns">
+                                <a href="" class="panel-edit"><i class="fa fa-edit"></i></a>
+                            </div><!-- panel-btns -->
+                            <h3 class="panel-title">Messaging</h3>
+                        </div>
+                        <div class="panel-body">
                             <ul>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Consectetur adipiscing elit
-                                    <ul>
-                                        <li>Phasellus iaculis neque</li>
-                                        <li>Purus sodales ultricies</li>
-                                    </ul>
+                                <li>
+                                    <small class="pull-right">Dec 10</small>
+                                    <h4 class="sender">Jennier Lawrence</h4>
+                                    <small>Lorem ipsum dolor sit amet...</small>
                                 </li>
-                                <li>Integer molestie lorem at massa</li>
+                                <li>
+                                    <small class="pull-right">Dec 9</small>
+                                    <h4 class="sender">Marsha Mellow</h4>
+                                    <small>Lorem ipsum dolor sit amet...</small>
+                                </li>
+                                <li>
+                                    <small class="pull-right">Dec 9</small>
+                                    <h4 class="sender">Holly Golightly</h4>
+                                    <small>Lorem ipsum dolor sit amet...</small>
+                                </li>
+                                <li>
+                                    <small class="pull-right">Dec 10</small>
+                                    <h4 class="sender">Jennier Lawrence</h4>
+                                    <small>Lorem ipsum dolor sit amet...</small>
+                                </li>
+                                <li>
+                                    <small class="pull-right">Dec 9</small>
+                                    <h4 class="sender">Marsha Mellow</h4>
+                                    <small>Lorem ipsum dolor sit amet...</small>
+                                </li>
                             </ul>
-                        </div><!-- col-md-4 -->
+                        </div><!-- panel-body -->
+                    </div><!-- panel -->
+                </div><!-- col-sm-6 -->
 
-                        <div class="col-md-4">
-                            <h5 class="subtitle">Ordered</h5>
-
-                            <p>A list of items in which the order does explicitly matter.</p>
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Consectetur adipiscing elit
-                                    <ol>
-                                        <li>Phasellus iaculis neque</li>
-                                        <li>Purus sodales ultricies</li>
-                                    </ol>
-                                </li>
-                                <li>Integer molestie lorem at massa</li>
-                            </ol>
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-dark panel-alt widget-quick-status-post">
+                        <div class="panel-heading">
+                            <div class="panel-btns">
+                                <a href="" class="panel-close">&times;</a>
+                                <a href="" class="minimize">&minus;</a>
+                            </div><!-- panel-btns -->
+                            <h3 class="panel-title">Quick Status Post</h3>
                         </div>
-
-                        <div class="col-md-4">
-                            <h5 class="subtitle">Unstyled</h5>
-
-                            <p>A list of items with class of <code>.list-unstyled</code>.</p>
-                            <ul class="list-unstyled">
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Consectetur adipiscing elit
-                                    <ol>
-                                        <li>Phasellus iaculis neque</li>
-                                        <li>Purus sodales ultricies</li>
-                                    </ol>
-                                </li>
-                                <li>Integer molestie lorem at massa</li>
+                        <div class="panel-body">
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="active"><a href="#post-status" data-toggle="tab"><i class="fa fa-pencil"></i> <strong>Status</strong></a></li>
+                                <li><a href="#post-photo" data-toggle="tab"><i class="fa fa-picture-o"></i> <strong>Photo</strong></a></li>
+                                <li><a href="#post-checkin" data-toggle="tab"><i class="fa fa-map-marker"></i> <strong>Check-In</strong></a></li>
                             </ul>
-                        </div>
+                            <div class="tab-content">
+                                <div id="post-status" class="tab-pane active">
+                                    <input type="text" class="form-control" placeholder="What's your status?"/>
+                                </div>
+                                <div id="post-photo" class="tab-pane">
+                                    <input type="text" class="form-control" placeholder="Choose photo"/>
+                                </div>
+                                <div id="post-checkin" class="tab-pane">
+                                    <input type="text" class="form-control" placeholder="Search location"/>
+                                </div>
+                                <button class="btn btn-primary btn-block mt10">Submit Post</button>
+                            </div><!-- tab-content -->
 
-                    </div><!-- row -->
-                </div><!-- panel-body -->
-            </div><!-- panel -->
+                        </div><!-- panel-body -->
+                    </div><!-- panel -->
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-btns">
-                        <a href="" class="panel-close">&times;</a>
-                        <a href="" class="minimize">&minus;</a>
-                    </div>
-                    <h4 class="panel-title">Wells</h4>
+                    <div class="mb20"></div>
 
-                    <p>Use the well as a simple effect on an element to give it an inset effect.</p>
-                </div><!-- panel-heading -->
-                <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="well">Look, I'm in well</div>
+                        <div class="col-xs-6">
+                            <div class="panel panel-warning panel-alt widget-today">
+                                <div class="panel-heading text-center">
+                                    <i class="fa fa-calendar-o"></i>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <h3 class="today">Fri, Dec 13</h3>
+                                </div><!-- panel-body -->
+                            </div><!-- panel -->
                         </div>
-                        <div class="col-md-4">
-                            <div class="well well-lg">Look, I'm in a large well</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="well well-sm">Look, I'm in a small well</div>
+
+                        <div class="col-xs-6">
+                            <div class="panel panel-danger panel-alt widget-time">
+                                <div class="panel-heading text-center">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <h3 class="today">4:50AM PST</h3>
+                                </div><!-- panel-body -->
+                            </div><!-- panel -->
                         </div>
                     </div>
-                </div><!-- panel-body -->
-            </div><!-- panel -->
+                </div><!-- col-sm-6 -->
+
+            </div>
 
         </div><!-- contentpanel -->
 
     </div><!-- mainpanel -->
 
+    <!--右边消息列表(默认是隐藏的，需要点击右上角的消息按钮才会出现)-->
     <div class="rightpanel">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified">
@@ -934,18 +1366,39 @@
 
 </section>
 
-
 <script src="js/jquery-1.10.2.min.js"></script>
+
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
+
 <script src="js/modernizr.min.js"></script>
+
 <script src="js/jquery.sparkline.min.js"></script>
+
 <script src="js/toggles.min.js"></script>
+
 <script src="js/retina.min.js"></script>
+
 <script src="js/jquery.cookies.js"></script>
+
+<script src="js/flot/flot.min.js"></script>
+
+<script src="js/flot/flot.resize.min.js"></script>
+
+<script src="js/morris.min.js"></script>
+
+<script src="js/raphael-2.1.0.min.js"></script>
+
+<script src="js/jquery.datatables.min.js"></script>
+
+<script src="js/chosen.jquery.min.js"></script>
 
 <script src="js/custom.js"></script>
 
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>
