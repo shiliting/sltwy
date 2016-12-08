@@ -1,7 +1,6 @@
 package com.slt.test.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.JpaDialect;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -13,7 +12,7 @@ import javax.persistence.EntityManagerFactory;
 /**
  * Created by Administrator on 2016/8/8.
  */
-@Configuration
+//@Configuration
 public class EntityManagerFactoryConfig {
     /**
      * jpa方言实现者

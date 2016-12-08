@@ -1,50 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ 版权所有:杭州火图科技有限公司
-  ~ 地址:浙江省杭州市滨江区西兴街道阡陌路智慧E谷B幢4楼
-  ~
-  ~ (c) Copyright Hangzhou Hot Technology Co., Ltd.
-  ~ Floor 4,Block B,Wisdom E Valley,Qianmo Road,Binjiang District
-  ~ 2013-2015. All rights reserved.
-  -->
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--&lt;!&ndash;-->
+  <!--~ 版权所有:杭州火图科技有限公司-->
+  <!--~ 地址:浙江省杭州市滨江区西兴街道阡陌路智慧E谷B幢4楼-->
+  <!--~-->
+  <!--~ (c) Copyright Hangzhou Hot Technology Co., Ltd.-->
+  <!--~ Floor 4,Block B,Wisdom E Valley,Qianmo Road,Binjiang District-->
+  <!--~ 2013-2015. All rights reserved.-->
+  <!--&ndash;&gt;-->
 
-<!--suppress SpringModelInspection -->
-<beans profile="develop" xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--&lt;!&ndash;suppress SpringModelInspection &ndash;&gt;-->
+<!--<beans profile="develop" xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xmlns:p="http://www.springframework.org/schema/p"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+        <!--http://www.springframework.org/schema/beans/spring-beans.xsd">-->
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/sltwy"/>
-        <property name="username" value="root"/>
-        <property name="password" value="123456"/>
-    </bean>
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url" value="jdbc:mysql://127.0.0.1:3306/sltwy"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="123456"/>-->
+    <!--</bean>-->
 
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-          p:packagesToScan="com.slt.test.entity">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="persistenceProvider">
-            <bean class="org.eclipse.persistence.jpa.PersistenceProvider"/>
-        </property>
-        <property name="jpaDialect">
-            <bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect"/>
-        </property>
-        <property name="jpaPropertyMap">
-            <map>
-                <!--<entry key="javax.persistence.jdbc.url"-->
-                       <!--value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>-->
-                <!--<entry key="javax.persistence.jdbc.user" value="dbuser"/>-->
-                <!--<entry key="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
-                <!--<entry key="javax.persistence.jdbc.password" value="ddbbuusseerr"/>-->
-                <entry key="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-                <entry key="eclipselink.weaving" value="false"/>
-                <entry key="eclipselink.logging.logger" value="org.eclipse.persistence.logging.CommonsLoggingLog"/>
-                <entry key="eclipselink.logging.level" value="FINE"/>
-            </map>
-        </property>
-    </bean>
+    <!--<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"-->
+          <!--p:packagesToScan="com.slt.test.entity">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+        <!--<property name="persistenceProvider">-->
+            <!--<bean class="org.eclipse.persistence.jpa.PersistenceProvider"/>-->
+        <!--</property>-->
+        <!--<property name="jpaDialect">-->
+            <!--<bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect"/>-->
+        <!--</property>-->
+        <!--<property name="jpaPropertyMap">-->
+            <!--<map>-->
+                <!--&lt;!&ndash;<entry key="javax.persistence.jdbc.url"&ndash;&gt;-->
+                       <!--&lt;!&ndash;value="jdbc:mysql://mysql.flashymall.com:3307/sltwy?useUnicode=true&amp;characterEncoding=UTF8"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<entry key="javax.persistence.jdbc.user" value="dbuser"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<entry key="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<entry key="javax.persistence.jdbc.password" value="ddbbuusseerr"/>&ndash;&gt;-->
+                <!--<entry key="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+                <!--<entry key="eclipselink.weaving" value="false"/>-->
+                <!--<entry key="eclipselink.logging.logger" value="org.eclipse.persistence.logging.CommonsLoggingLog"/>-->
+                <!--<entry key="eclipselink.logging.level" value="FINE"/>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 
-</beans>
+<!--</beans>-->
